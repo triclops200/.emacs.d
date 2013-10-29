@@ -1,8 +1,0 @@
-(setq moreLines t)
-(defun indent-file ()
-  (interactive)
-  (goto-char 1)
-  (while moreLines
-    (indent-according-to-mode)
-    (setq moreLines (= 0 (forward-line 1)))))
-  
