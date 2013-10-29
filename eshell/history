@@ -1,128 +1,128 @@
-./runproject.lisp 
-./runproject.lisp 
-python2 plotter.py 
-python2 plotter.py 
-python2 plotter.py 
-python2 plotter.py 
-python2 plotter.py 
-python2 plotter.py 
-python2 plotter.py 
-python2 plotter.py 
-python2 plotter.py 
-python2 plotter.py 
-python2 plotter.py 
-python2 plotter.py 
-clear
-exit
-cd ..
-git pull origin master
-scons
-src/fhandle.c:29:2: warning: incompatible implicit declaration of builsconst-in function 'memcpy' [enabled by default]
-scons
-scons
-scons: Building targets ...scons
-scons
-./build/linux/rpn 
-./build/linux/rpn src/main.c 
-./build/linux/rpn src/main.c src/fpass.c
-./build/linux/rpn src/main.c src/fhandle.c 
-valgrind ./build/linux/rpn src/main.c src/fhandle.c 
-scons
-scons: done reading SConscript files.scons
-scons
-git add -A
-git commit -m "Merges files"
-git push origin master
 ls
-cd src
+rm math-util.lisp\~
+rm util.lisp\~
 ls
-touch tokenizer.c
-cd ../include/
-head
-hea
-genrb
-touch tokenizer.h
-cd ..
-exit
-cd ..
-scons
-./build/linux/rpn 
-./build/linux/rpn main.c
-./build/linux/rpn src/main.c 
-git pull origin master
-exit
+rm newproject.lisp\~
+rm runproject.lisp\~
+ls
+chmod -x newproject.lisp 
+chmod -x runproject.lisp 
+ls
+chmod +x runproject.sh
+chmod +x newproject.sh
+ls
+./newproject.sh 
+./runproject.sh 
+./newproject.sh 
+./runproject.sh 
 git add -A
-git commit -m "Fixed merge issues -_-"
+git status
+git commit -m "Changed permissions on the lisp files, more unified unix-like interface"
 git push origin master
-exit
-nc localhost 9090
-exit
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+git pull origin master
+vim example-main.lisp 
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
 clear
-cd ..
-scons
-scons
-scons
-scons
-./build/linux/rpn src/main.c src/fpass.c
-./build/linux/rpn src/main.c src/fpass.c
-scons
-./build/linux/rpn src/main.c src/fpass.c
-./build/linux/rpn src/main.c src/fhandle.c 
-valgrind ./build/linux/rpn src/main.c src/fhandle.c 
-./build/linux/rpn src/main.c src/fhandle.c 
-scons
-./build/linux/rpn src/main.c src/fhandle.c 
-./build/linux/rpn src/main.c src/fhandle.c 
-scons
-./build/linux/rpn src/main.c src/fhandle.c 
-scons
-scons
-./build/linux/rpn src/main.c src/fhandle.c 
-scons
-scons
-./build/linux/rpn src/main.c src/fhandle.c 
-scon
-scons
 git add -A
-git commit -m"Better file handling system, started framework for the interpereter"
+git commit -m "LOTSOCHANGES!"
 git push origin master
+./runproject.sh 
+./build/linux/rpn src/main.c src/fhandle.c  
+./runproject.sh 
+clear
+clear
+./runproject.sh 
+./runproject.sh 
+`(1 2 3)
+`cat test.txt`
+(list 1 2 3)
+echo (list 1 2 3)
+git add -a
+git add -A
+git commit -m "Merged util.lisp"
+git push origin master
+clear
+ls
+git add -A
+git commit -m "possible socket fix"
+git push origin master
+git add -A
+git commit -m "another possible fix"
+git push origin master
+vim runproject.lisp
+git add -A
+git commit -m"fixes"
+git push origin master
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+rm -rf 16
+clear
+ls
+rm -rf 80
+clear
+git add -A
+git add -A
+git add -A
+git commit -m"Better project management"
+git push origin master
+clear
+./runproject.sh 
+vim example-main.lisp 
+git add -A
+git commit -m"Fixes, better formatting"
+git push origin master
+clear
+./runproject.sh 
+clear
+./runproject.sh 
+./runproject.sh 
+ls
+git add -A
+git add -A
+git commit -m"Better error handling"
+git push origin master
+./runproject.sh 
 git pull origin master
 git add -A
-git commit -m "merge"
+git commit -m"Better error handling"
 git push origin master
-vim Makefile 
-cat Makefile 
-make
-cd !
-cd ~
-cd np
-rustc np.rs
-rustc np.rc
-rustc np.rs
-rustc np.rs
-rustc np.rs
-rustc np.rs
-rustc np.rs
-rustc np.rs
-rustc np.rs
-rustc np.rs
-rustc np.rs
-rustc np.rs
-rustc np.rs
-rustc np.rs
-rustc np.rs
-rustc np.rs
-exit
-./runproject.lisp 
-./runproject.lisp 
-./runproject.lisp 
-./runproject.lisp 
-./runproject.lisp 
-./runproject.lisp 
-./runproject.lisp 
-./runproject.lisp 
-./runproject.lisp 
-./runproject.lisp 
-./runproject.lisp 
-(read)
-(read)
+./runproject.sh 
+git add -A
+git commit -m"oops, didn't test code first, I'm an idiot. That should never happen."
+git push origin master
+./runproject.sh 
+clear
+./runproject.sh 
+./runproject.sh 
+git status
+./runproject.sh 
+clear
+./newproject.sh 
+./runproject.sh 
+clear
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+clear
+./runproject.sh 
+./runproject.sh 
+clear
+git pull origin  master
+cd Programming/Projects/project-euler/Bryan/CLisp/
+ls
+clear
+git push origin master
+./runproject.sh 
+./runproject.sh 
+clear

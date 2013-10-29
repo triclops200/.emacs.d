@@ -3,3 +3,7 @@
 (load "gitpush.el")
 (global-set-key (kbd "C-c i") 'indent-file)
 (global-set-key (kbd "C-c g g") 'git-push-all)
+(global-set-key (kbd "C-c g a") 'git-add-all)
+(global-set-key (kbd "C-c g w") 'git-push)
+(global-set-key (kbd "C-c g c") 'git-commit)
+(global-set-key (kbd "C-c g y") 'git-pull)

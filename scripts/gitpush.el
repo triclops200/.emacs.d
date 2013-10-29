@@ -7,6 +7,13 @@
   (interactive)
   (shell-command "git add -A"))
 
+(defun git-pull ()
+  (interactive)
+  (save-window-excursion
+	(let ((buf (generate-new-buffer "async")))
+	  (async-shell-command  "git pull origin master" buf)
+	  (run-with-timer 10 nil (lambda (buf) (kill-buffer buf)) buf))))
+
 (defun git-push ()
   (interactive)
   (save-window-excursion
