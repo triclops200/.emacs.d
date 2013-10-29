@@ -1,0 +1,5 @@
+(defun git-push-all (commit-message)
+  (interactive)
+  (shell-command "git add -A")
+  (shell-command (concatenate 'string "git commit -m \"" commit-message "\""))
+  (shell-command "git push origin master"))
