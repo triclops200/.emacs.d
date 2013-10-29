@@ -1,0 +1,111 @@
+./runproject.lisp 
+clear
+./runproject.lisp 
+./runproject.lisp 
+./runproject.lisp 
+./runproject.lisp 
+./runproject.lisp 
+./runproject.lisp 
+./runproject.lisp 
+./runproject.lisp 
+./runproject.lisp 
+./runproject.lisp 
+./runproject.lisp 
+python2 plotter.py 
+python2 plotter.py 
+python2 plotter.py 
+python2 plotter.py 
+python2 plotter.py 
+python2 plotter.py 
+python2 plotter.py 
+python2 plotter.py 
+python2 plotter.py 
+python2 plotter.py 
+python2 plotter.py 
+python2 plotter.py 
+clear
+exit
+mkdir CRPN
+cd CRPN
+clear
+exit
+make
+clear
+./rpn
+clear
+ls
+clear
+vim
+clear
+exit
+make
+clear
+git init
+git remote add origin git@triclops200.com:Triclops200/crpn.git
+git add -A
+git commit -m"st"
+git push origin master
+sudo shutdown 0 -hP
+git pull origin master
+ls
+cd CRPN/
+clear
+git pull origin master
+ls
+scons
+sudo aptitude install scons
+clear
+scons 
+./build/linux/rpn 
+scons
+scons
+scons: Reading SConscript files ...scons
+scons
+vim SConstruct 
+scons
+scons
+./build/linux/rpn 
+erminated because of errors.
+scons
+scons
+scons
+./build/linux/rpn 
+scons
+scons -c
+scons
+./build/linux/rpn 
+scons
+./build/linux/rpn 
+./build/linux/rpn 
+[LD] build/linux/rpnscons
+scons
+./build/linux/rpn 
+./build/linux/rpn src/main.c 
+scons
+scons
+./build/linux/rpn 
+./build/linux/rpn main.c
+rm main.c
+clear
+./build/linux/rpn main.c
+./build/linux/rpn src/main.c 
+./build/linux/rpn src/fhandle.c 
+git add -A
+git commit -m "Can read entire files now"
+git push origin master
+sudo shutdown 0 -hP
+exit
+git pull origin master
+exit
+./runproject.sh 
+ls
+vim runproject.sh
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+clear
+git add -A
+git add -A
+git commit -m "Better code seperation"
+git push origin master
