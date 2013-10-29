@@ -1,0 +1,5 @@
+(add-to-list 'load-path "~/.emacs.d/scripts")
+(load "indentfile.el")
+(load "gitpush.el")
+(global-set-key (kbd "C-c i") 'indent-file)
+(global-set-key (kbd "C-c g g") 'git-push-all)
