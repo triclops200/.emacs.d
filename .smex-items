@@ -1,16 +1,21 @@
 
 ;; ----- smex-history -----
 (
+ cider-jack-in
+ eshell
+ eval-buffer
+ package-menu-mark-delete
+ dbx
  list-packages
  cd
- 5x5
- arp
- dbx
- dig
- erc
 )
 
 ;; ----- smex-data -----
 (
  (list-packages . 1)
+ (dbx . 1)
+ (package-menu-mark-delete . 1)
+ (eval-buffer . 2)
+ (eshell . 1)
+ (cider-jack-in . 2)
 )

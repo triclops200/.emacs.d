@@ -2,18 +2,21 @@
 (load "slime-company.el")
 (load "indentfile.el")
 (load "gitpush.el")
+(load "notes.el")
 (require 'package)
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
 (global-unset-key (kbd "C-c g"))
+(global-unset-key (kbd "C-c n"))
 (global-set-key (kbd "C-c i") 'indent-file)
 (global-set-key (kbd "C-c g g") 'git-push-all)
 (global-set-key (kbd "C-c g a") 'git-add-all)
 (global-set-key (kbd "C-c g w") 'git-push)
 (global-set-key (kbd "C-c g c") 'git-commit)
 (global-set-key (kbd "C-c g y") 'git-pull)
+(global-set-key (kbd "C-c n b") 'box-word)
 (global-set-key (kbd "M-<tab>") 'company-complete)
 (require 'eclim)
 (require 'eclimd)
@@ -37,11 +40,7 @@
 (add-hook 'after-init-hook 'global-company-mode)
 
 (setq inferior-lisp-program "sbcl --dynamic-space-size 2000")
-(defvar my-packages '(starter-kit
-					   starter-kit-lisp
-					   starter-kit-bindings
-					   starter-kit-eshell
-					   clojure-mode
+(defvar my-packages '( clojure-mode
 					   clojure-test-mode
 					   cider))
 

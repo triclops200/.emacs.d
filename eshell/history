@@ -1,26 +1,3 @@
-clear
-ls
-git add -A
-git commit -m "possible socket fix"
-git push origin master
-git add -A
-git commit -m "another possible fix"
-git push origin master
-vim runproject.lisp
-git add -A
-git commit -m"fixes"
-git push origin master
-./runproject.sh 
-./runproject.sh 
-./runproject.sh 
-./runproject.sh 
-rm -rf 16
-clear
-ls
-rm -rf 80
-clear
-git add -A
-git add -A
 git add -A
 git commit -m"Better project management"
 git push origin master
@@ -126,3 +103,26 @@ cd ..
 mkdir Clojure
 cd Clojure/
 ls
+ls
+clear
+cd ..
+rm -rf Clojure/
+lein new 
+lein new app
+rm -rf app/
+lein new Clojure
+lein new clojure
+lein new cloj
+cd cloj/
+ls
+cd src/
+ls
+cd cloj/
+ls
+cd
+cd .emacs.d/
+ls
+cd elpa/
+ls
+rm starter-kit-*
+rm -rf starter-kit-*
