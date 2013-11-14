@@ -1,55 +1,3 @@
-ls
-rm math-util.lisp\~
-rm util.lisp\~
-ls
-rm newproject.lisp\~
-rm runproject.lisp\~
-ls
-chmod -x newproject.lisp 
-chmod -x runproject.lisp 
-ls
-chmod +x runproject.sh
-chmod +x newproject.sh
-ls
-./newproject.sh 
-./runproject.sh 
-./newproject.sh 
-./runproject.sh 
-git add -A
-git status
-git commit -m "Changed permissions on the lisp files, more unified unix-like interface"
-git push origin master
-./runproject.sh 
-./runproject.sh 
-./runproject.sh 
-./runproject.sh 
-git pull origin master
-vim example-main.lisp 
-./runproject.sh 
-./runproject.sh 
-./runproject.sh 
-./runproject.sh 
-./runproject.sh 
-./runproject.sh 
-clear
-git add -A
-git commit -m "LOTSOCHANGES!"
-git push origin master
-./runproject.sh 
-./build/linux/rpn src/main.c src/fhandle.c  
-./runproject.sh 
-clear
-clear
-./runproject.sh 
-./runproject.sh 
-`(1 2 3)
-`cat test.txt`
-(list 1 2 3)
-echo (list 1 2 3)
-git add -a
-git add -A
-git commit -m "Merged util.lisp"
-git push origin master
 clear
 ls
 git add -A
@@ -126,3 +74,55 @@ git push origin master
 ./runproject.sh 
 ./runproject.sh 
 clear
+./runproject.sh 
+clear
+git pull origin master
+./runproject.sh 
+./runproject.sh 
+clear
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+rm CleanedMyPublicTests.java
+rm CleanedMyPublicTestsBad.java 
+clear
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+./newproject.sh 
+./runproject.sh 
+./newproject.sh 
+./runproject.sh 
+./newproject.sh 
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+clear
+./newproject.sh 
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+./runproject.sh 
+./newproject.sh 
+./runproject.sh 
+./runproject.sh 
+clear
+./buildproject.sh 
+./runproject
+clear
+cd ..
+mkdir Clojure
+cd Clojure/
+ls

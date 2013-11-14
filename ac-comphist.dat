@@ -1,0 +1,12 @@
+((("ArrayList - java.util" .
+   [0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("eclim" .
+   [0 0 0 0 1])
+  ("require" .
+   [3 0 0 0 0 0 0])
+  ("company" .
+   [1 0 0 0 0 0 1])
+  ("company-emacs-eclim-setup" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("company-emacs-eclim" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])))
