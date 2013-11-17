@@ -18,6 +18,7 @@
 (global-set-key (kbd "C-c g y") 'git-pull)
 (global-set-key (kbd "C-c n b") 'box-word)
 (global-set-key (kbd "M-<tab>") 'company-complete)
+
 (require 'eclim)
 (require 'eclimd)
 (global-eclim-mode)
@@ -35,16 +36,32 @@
 (defun eclim-run-test ()
   (interactive)
   (if (not (string= major-mode "java-mode"))
-	(message "Sorry cannot run current buffer."))
+	  (message "Sorry cannot run current buffer."))
   (compile (concat eclim-executable " -command java_junit -p " eclim--project-name " -t " (eclim-package-and-class))))
 (add-hook 'after-init-hook 'global-company-mode)
 
 (setq inferior-lisp-program "sbcl --dynamic-space-size 2000")
-(defvar my-packages '( clojure-mode
-					   clojure-test-mode
-					   cider))
+(defvar my-packages '(
+					  clojure-mode
+					  clojure-test-mode
+					  cider))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
 	(package-install p)))
 
+(defface esk-paren-face
+   '((((class color) (background dark))
+      (:foreground "grey50"))
+     (((class color) (background light))
+      (:foreground "grey55")))
+   "Face used to dim parentheses."
+   :group 'starter-kit-faces)
+
+
+(font-lock-add-keywords 'emacs-lisp-mode
+                        '(("(\\|)" . 'esk-paren-face)))
+(font-lock-add-keywords 'lisp-mode
+                        '(("(\\|)" . 'esk-paren-face)))
+
+(add-to-list 'auto-mode-alist '("\\.sml\\'" . scheme-mode))

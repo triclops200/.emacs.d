@@ -1,0 +1,73 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/jsvlrt/Programming/Projects/project-euler/Bryan/cloj/test/" . "cloj/")
+ ("/home/jsvlrt/Programming/Projects/project-euler/Bryan/cloj/src/" . "cloj/")
+ ("/home/jsvlrt/Programming/Projects/project-euler/Bryan/cloj/" . "test/")
+ ("/home/jsvlrt/Programming/Projects/project-euler/Bryan/" . "CLisp/")
+ ("/home/jsvlrt/Programming/Projects/project-euler/" . "Bryan/")
+ ("/home/jsvlrt/Programming/Projects/" . "project-euler/")
+ ("/home/jsvlrt/Programming/" . "Projects/")
+ ("/home/jsvlrt/" . ".emacs.d/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/jsvlrt/Programming/Projects/project-euler/Bryan/CLisp/1/"
+ "/home/jsvlrt/.emacs.d/"
+ "/home/jsvlrt/Programming/Projects/project-euler/Bryan/CLisp/"
+ "/home/jsvlrt/Programming/Projects/project-euler/Bryan/cloj/src/cloj/"
+ "/home/jsvlrt/Programming/Projects/project-euler/Bryan/cloj/test/cloj/"
+ "/home/jsvlrt/Programming/Projects/project-euler/Bryan/cloj/"
+ "/home/jsvlrt/Programming/Projects/project-euler/Bryan/Clojure/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "main.lisp"
+ "custom.el"
+ "math-util.lisp"
+ "runload.lisp"
+ "core.clj"
+ "core_test.clj"
+ "LICENSE"
+ "1.clj"
+ "repl-port"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/jsvlrt/Programming/Projects/project-euler/Bryan/CLisp/1/" (21125 107 549997 955000) "util.lisp" "../" "main.lisp~" "math-util.lisp" "main.fasl" "./" "main.lisp")
+
+ ("/home/jsvlrt/.emacs.d/" (21124 63767 59370 702000) "../" "custom.el" "emacs-color-theme-solarized/" "backups/" "#.gitignore#" "slime-company.el" ".git/" ".smex-items" "elpa/" ".gitignore" "games/" "places" "ac-comphist.dat" "eshell/" "auto-save-list/" "scripts/" "./" "url/")
+
+ ("/home/jsvlrt/Programming/Projects/project-euler/Bryan/CLisp/" (21124 65073 437258 96000) "24/" "util.lisp" "3/" "math-util.fasl" "23/" ".gitignore" "1/" "67/" "9/" "*slime-repl sbcl*~" "18/" "*slime-repl sbcl*" "runproject.lisp" "21/" "#*slime-repl sbcl*#" "../" "25/" "4/" "runload.lisp" "7/" "48/" "10/" "runproject.fasl" "nohup.out" "14/" "runproject.sh" "2/" "5/" "15/" "12/" "newproject.sh" "buildproject.sh" "project-euler.tar.gz" "runload.lisp~" "newproject.fasl" "example-main.lisp" "6/" "math-util.lisp" ".runproject.sh.swp" "newproject.sh~" "16/" "runproject" "22/" "11/" "13/" "runload.fasl" "./" "newproject.lisp" "runproject.sh~" "util.fasl" "20/" "8/")
+
+ ("/home/jsvlrt/" (21124 63767 57370 739000) ".icedtea/" "tmpdir/" ".fehbg" ".serverauth.2914" "list" ".x11pass" "ds/" ".recentf" ".gitconfig" ".nestopia/" ".cache/" "nvidia/" "CTRL-SPACE/" "bitcoin/" ".esd_auth" ".Achron/" "bintest" ".FontForge/" "screen3.png" "DiffEqP5.pdf" "tags.scm" "coord" "PocketSchedule.pdf" "zshstuff.tar.gz" "LilasPoem.eml" "ECE301HW1.pdf" "\\" "quizes" "updatebindirkindle" "FreeCAD-0.9.2646/" ".Xauthority" ".irb-history" "tmp.bmp" ".dayplan" ".screen/" "powder.pref" ".np.c.swp" ".serverauth.2598" "rak.tar.bz2" ".zshrc" "SDL-2.0.0-6940/" "logicloop" "#out.txt#" "out.txt" "0ad-0.0.11.ebuild" "screen2.png" ".classpath" "pi@192.168.2.2" "test.cpp" ".q3a/" "META-INF/" ".zhistory" "pastebincl-1.0/" "src.rkt" ".serverauth.2300" "DrewProj/" "nohup.out" ".eclimrc" ".thumbnails/" "Notes/" ".synfig/" "Rx_ A Tale of Electronegativity - Robert Brockway.mobi" "Music/" "Pictures/" "debpackages/" ".redcar/" "inkscape-0.48.2/" "mup/" "1366768map.png" "newtest.cpp" "rails_projects/" ".cabal/" ".serverauth.2772" "np.c" ".vim/" "minecraft_renamer.py" ".warzone2100-2.3/" ".ash_history" "np.dvi" "gruler/" "numquine.rb" ".serverauth.2849" "otime.count" "output.number" "np.py" ".wicd/" "startvmware" "ECE301Lab1Leland.pdf" "test.jpg" ".darkplaces/" "test.c" ".dreampie" "out2" "serp.xcf" ".eclim/" "al.py" ".alsaequal.bin" "armfrac.2" "test/" "np.o" "np.tex" "LinkedList.jar" "euler.tar.gz" "libpeerconnection.log" "live_36459422_sSahvyZicm9qqDtyyg0Wph1nh7G03n" "root@192.168.2.2" ".m2/" ".fontconfig/" "hs_err_pid12283.log" "fib.txt" "test2.py" ".serverauth.4311" "wp.png" "winepatch/" "mnpass" ".serverauth.2492" ".vimperator/" ".nautilus/" "histquiz" "euler.py" ".gimp-2.6/" "ruby-2.0.0-p247/" ".opera/" ".steam/" "test.ini" "hack/" ".serverauth.2465" ".rvm/" "cuda-workspace/" "updatewallpaper.sh" "dw.py" "LightTable/" ".filezilla/" ".adobe/" "comm100/" "Cropped.png" "coreutils/" "pk0.tar.bz2" "baron1405-Meazure-c16c43b/" ".links/" "TI-Nspire/" ".dayplan.priv" "DriversLicense.png" "h" ".serverauth.5544" "scane.pdf" "test.cse" ".zcompdump" "ECE301Lab1/" "Algodoo/" ".serverauth.2669" "lw.png" "text.txt~" ".serverauth.19207" ".vimrc" "synfigstudio-0.63.05-20120409.master.8.x86_64/" ".pland" "setup.tar.gz" "ttt" "multipageproject/" "Pak1.pak" "np.aux" ".serverauth.2556" "tmp/" ".xchat2/" ".lci_history" "Mathematica/" "matlab.m" "tconvert.rb" "leland/" "np3.py" ".viminfo" "stststst" "bh/" "Greek_lc_lamda_thin.jpg" ".swn" ".pulse-cookie" "src.rkt~" ".slime-history.eld" ".nvidia-settings-rc" "shot-1372041425.png" "tests/" "usr/" ".emacs~" "Speech.odt" "kindlebindir/" "poem.txt" "xtest.cpp" "NstPrime.class" "ECE301Lab1Leland/" ".gtkrc-1.2-gnome2" "Templates/" ".root_hist" "mupen64plus-bundle-src-1.99.1/" ".vmware/" "lt.jpg" "sched" "SNES.7z" "leland.pdf" "np.exe" ".jackdrc" "starcraft" ".porthole/" "sini/" "StarCraft II/" "awesome.tar.gz" "serp.png" "TMP/" ".sshterm/" ".dartium/" "Apo7X-120716-110.png" ".acetoneiso/" "themes.tar.gz" "emergeInfo.txt" ".ies4linux/" ".config/" "Person.class" ".serverauth.18325" "test.py" "colemak-1.0/" "armfrac" "ruby.tar.gz" ".mono/" ".fonts/" ".bcast/" "workbench.xmi" "debrasp/" ".mozilla/" ".pip/" ".slocdata/" "ECHO/" ".serverauth.2156" "hundert.lisp" "My Digital Editions/" ".serverauth.2892" "geek.bmp" "Blackboard/" ".technic/" ".icons/" ".g15macro/" ".swp" "isodb/" "C___wallpaper_by_FluffyEvilBunny.png" ".ghc/" ".xinitrc.bkp" "test.m" ".octave_hist" ".systemtap/" "jtest/" ".settings/" ".texlive/" ".gconfd/" "frac" "rakarrack-0.6.1/" "OUYA-ODK/" ".pulse/" "courses" ".gnome2_private/" ".swo" "turingtmp" "libGL.so.319.17" "TMPDIR/" "gomoku++.zip" "plot.m~~" "raw-sha1.txt" ".speech-dispatcher/" ".mednafen/" ".gphoto/" "vbb/" "MMsKey" "lw.jpg" "test.java" ".gitignore" ".audacity-data/" ".gimp-2.8/" ".fceux/" "troll.c" "Calibre Library/" "testfile" ".Mathematica/" "Rx_ A Tale of Electronegativity - Robert Brockway.azw3" "hashes/" "Server/" "test.rb" "armfrac.1" "DiffEq/" ".uqm/" "thunderbird64.tar.gz" ".AbiSuite/" "#.bash_rc#" "solver.py" "usrscripts/" "vmware/" "test.lisp.out" ".bash_logout" "vim/" ".sane/" ".sconsign.dblite" "mountserver.sh" "xchat.tar.gz" "wxmupen64plus/" ".xscreensaver" "zshcompletions/" ".xbindkeysrc" "ArmA 2/" "Screencast.avi" "screen1.png" "FinalDraftChecklist" "vimprint.rb" ".serverauth.2863" "New Folder/" "sdl.tar.gz" "freetts-1.2/" ".pastebinclrc" "slime-2013-04-05/" "quine.py" ".purple/" ".serverauth.2801" ".pki/" "np.hs~" ".Xdefaults" "__MACOSX/" ".serverauth.2297" "tmp.png" "callnumber" "rbg.jpg" "test.wav" "testcd.db" "serp.jpg" ".emacs.d/" ".asoundrc.bkp" ".hugin" "cmu07a.dic" "NstPrime.java" "workspace/" "env/" "mymovie2.avi" ".xonotic/" "1" "np.lisp" "converter.py" ".gstreamer-0.10/" "NVIDIA-Linux-x86_64-319.23.run" "update_usbnetwork_0.39.N_k3g_install.bin" "server.log" "Videos/" "pocketsphinx-0.8/" "text.txt" ".MumbleOverlayPipe" "classes.rb" ".wine/" "dice.py~" "Downloads/" ".gnome2/" "Steam/" ".serverauth.2365" ".serverauth.19184" "matlabhw.m" ".zsh_profile" ".slime/" "git/" "np.hi" ".gtk-bookmarks" "#np.scm#" "Documents/" "FTB/" "turingtmp2" ".gnome/" "ODE.zip" ".gnupg/" "dmg2iso.pl" ".wxMUD/" ".AwOkenrcDark" "screenawake.sh" ".cmus/" ".gem/" ".recently-used" "clojurescript/" ".marks/" "flames/" "mine.p12" "#np.py#" ".gtkrc.mine" ".ICEauthority" "Mixxx/" "tmp.pub" "tri.txt" "req.txt" "slime-current.tgz" "testsml/" ".serverauth.16446" "triangle.txt" "out" "test.txt" "histterms" "dmesg.txt" "test.scm" ".serverauth.2862" "np4.py" ".TrueCrypt/" ".minecraft/" "oclHashcat-plus-0.13/" ".mangler/" "dice.py" "android-sdk-linux/" "out.c" "bin/" "octave-core" "stringout.c" "rename.rb" "Public/" ".jline-reply.history" ".eclipse/" ".emacs" "config" "AptanaStudio3Workspace/" "CoVim/" "ECE301HW2.pdf" "np5.py" "test.lisp~" ".cproject" "gradus.fasl" ".rustpkg/" "hs_err_pid11863.log" "pmars-0.9.2-5/" "pwnat-0.3-beta/" ".serverauth.2802" ".bzr.log" ".lesshst" ".hplip/" ".asoundrc" ".bash_history" "julius-4.2.2/" "ftmp/" ".tilp" "texput.log" "HW1.zip" ".themes/" ".steampid" ".racket/" "plist.txt" ".frictionalgames/" ".ftblauncher/" ".ido.last" "np.hs" ".serverauth.20965" "tester.rb" "save.cookie" "listoffibs.txt" ".screenrc" ".lighttable/" "images/" "Desktop/" "#poem.txt#" ".Xresources" "ScanProjects/" ".zprofile" "bignum.txt" ".serverauth.2686" ".serverauth.2715" "assets/" ".ssh/" ".irssi/" ".gnome-mud/" "test.mp4" "tmpfile" ".serverauth.2956" "vim73/" ".tremulous/" "gradus.lisp~" "ttt.cpp" ".kdiff3rc" "tfile" "Comm0100.png" "MilitaryID.png" "Project6/" ".fltk/" "rpn.js" ".qtoctave/" ".mixxx/" "my games/" "Person.java" ".macromedia/" "WILL" "Misc/" "malbolge" ".nv/" ".serverauth.23551" ".swt/" "Programming/" "src.b" "tttt" ".dolphin-emu/" "numbers.txt" ".alsoftrc" "Saves/" "pak0.pk3" ".xinitrc" "destrap.conf" "id_rsa.pub" ".serverauth.2280" "teamviewer7/" "dart/" "test.fasl" "node-v0.8.20/" "helloworld.c" ".android/" ".serverauth.2842" "testtesttest" ".subversion/" ".VirtualBox/" "My Barnes & Noble eBooks/" ".plist.txt.swp" ".lein/" ".swm" "mydict.txt" "np/" "NES.7z" ".matplotlib/" ".techniclauncher/" "zeus.ite.gmu.edu:" "ODE/" "tttt.py" "a.out" ".serverauth.2690" ".gconf/" "tmp~" "Schedule.ods" "powder" ".msf4/" ".lingot/" ".mplayer/" "np.pdf" ".MumbleSocket" ".keep" "deccom.py" ".dosbox/" ".muttator/" "Comm100Speech7NoteCard.odt" "plotter.m~~" ".lastpass/" ".serverauth.4027" "np.tex~" "helloworld.cpp" "hs_err_pid11741.log" "fontconfig/" "Guild Wars 2/" ".serverauth.2731" ".serverauth.2973" "awesomestart.sh" ".pythonhist" "wtf/" "DiffEqP5.tex" ".bash_profile" ".blackboard/" ".local/" "HW1/" ".Kega Fusion/" "gtk-3.0/" "dmd2/" ".gtkrc-2.0" ".steampath" "sini.7z" ".Nitrous/" "np2.py" "cs_sequence.txt" "newdic.dic" ".gksu.lock" ".serverauth.3331" "mydic.dic" "np.cpp" "ruby-2.0.0-p247.tar.gz" "joshmigration/" "onestop.mid" "np.lisp~" ".xdvirc" "np.log" "DiabloMiner/" ".bashrc" "ExampleM.java" "cnp.py" "raw-md5.txt" ".java/" "bestcarforspeedway.txt" ".milkytracker_config" "tt.cpp" ".thunderbird/" "botlib.log" ".dvdcss/" ".hundert.lisp.swp" ".opera-next/" ".serverauth.2955" ".project" "gomoku++/" "br.txt" "tmp.txt" "gradus.lisp" "test.lisp" ".dbus/" ".guvcviewrc" "mymovie.avi" "leiningen-master/" "../" "./")
+
+ ("/home/jsvlrt/Programming/Projects/project-euler/Bryan/cloj/src/cloj/" (21124 6706 289148 688000) "#core.clj#" ".#core.clj" "../" "core.clj" "./")
+
+ ("/home/jsvlrt/Programming/Projects/project-euler/Bryan/cloj/test/cloj/" (21124 5964 89477 760000) "../" "core_test.clj" "./")
+
+ ("/home/jsvlrt/Programming/Projects/project-euler/Bryan/cloj/test/" (21124 5743 854440 616000) "../" "cloj/" "./")
+
+ ("/home/jsvlrt/Programming/Projects/project-euler/Bryan/cloj/src/" (21124 5743 854440 616000) "../" "cloj/" "./")
+
+ ("/home/jsvlrt/Programming/Projects/project-euler/Bryan/cloj/" (21124 5809 158265 161000) ".gitignore" "#LICENSE#" "doc/" "../" "resources/" "src/" "LICENSE" ".nrepl-port" "target/" "project.clj" ".#LICENSE" "test/" "./" "README.md")
+
+ ("/home/jsvlrt/Programming/Projects/project-euler/Bryan/" (21124 5743 851440 670000) "3.out" "23.py" "40.c" "CLisp/" "__pycache__/" "44.py" ".gitignore" "Makefile" "67.py" "helpermodules.pyc" "32.py" "40.out" "48.py" "../" "cloj/" "18.py" "46.py" "40.py" "45.py" "3.py" "30.py" "3.c" "helpermodules.py" "./" "29.py")
+
+ ("/home/jsvlrt/Programming/Projects/project-euler/Bryan/Clojure/" (21124 5581 195369 936000) "../" "repl-port" ".#repl-port" "./")
+
+ ("/home/jsvlrt/Programming/Projects/project-euler/" (21094 38443 719414 593000) ".gitignore" "Bryan/" "../" ".git/" "./" "Joshua/")
+
+ ("/home/jsvlrt/Programming/Projects/" (21056 55288 429671 815000) "Lunux/" "mniip/" "okfooler/" "cse/" "PredicateSimp/" "PowderToypp/" "zmi2/" "Infamous/" "CS101/" "stap/" "rape-cpu-specification/" "../" "lilascodingtutorial/" "crpn/" "zmi/" "MMBotC/" "rpnfl/" "cs112/" "project-euler/" "TriBotC++/" "SDLGameEngine/" "tptpp/" "icfp2012/" "RAPE/" "The-Powder-Toy/" "mqsort/" "icfp2013/" "simplang/" "um32asm/" "./" "RouteThrough/" "the-space-hive-mind/")
+
+ ("/home/jsvlrt/Programming/" (21033 4056 366158 263000) "Haskell/" "Clojure/" "util.lisp" "CLisp/" "haxe/" "Racket/" "Admin/" "CS112/" "../" "tmp/" "Scheme/" "Work/" "PHP/" "Python/" "Projects/" "JavaScript/" "np.py" "C/" "Lisp/" "Lua/" "lost+found/" "Cuda/" "C++/" "Ruby/" "Externals/" "27319.py" "./" "MMPE/")
+
+ ("/home/jsvlrt/.emacs.d/games/" (20707 48388 0 0) "../" "tetris-scores" "tetris-scores~" "snake-scores" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

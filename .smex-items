@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- cider-jack-in
  eshell
- eval-buffer
- package-menu-mark-delete
- dbx
- list-packages
- cd
+ describe-function
+ describe-key
+ global-set-key
+ local-set-key
+ slime
+ menu-bar-mode
 )
 
 ;; ----- smex-data -----
@@ -16,6 +16,14 @@
  (dbx . 1)
  (package-menu-mark-delete . 1)
  (eval-buffer . 2)
- (eshell . 1)
+ (eshell . 3)
  (cider-jack-in . 2)
+ (package-install . 3)
+ (slime . 2)
+ (paredit-wrap-round . 3)
+ (menu-bar-mode . 1)
+ (describe-function . 2)
+ (describe-key . 6)
+ (local-set-key . 2)
+ (global-set-key . 1)
 )

@@ -1,27 +1,3 @@
-git add -A
-git commit -m"Better project management"
-git push origin master
-clear
-./runproject.sh 
-vim example-main.lisp 
-git add -A
-git commit -m"Fixes, better formatting"
-git push origin master
-clear
-./runproject.sh 
-clear
-./runproject.sh 
-./runproject.sh 
-ls
-git add -A
-git add -A
-git commit -m"Better error handling"
-git push origin master
-./runproject.sh 
-git pull origin master
-git add -A
-git commit -m"Better error handling"
-git push origin master
 ./runproject.sh 
 git add -A
 git commit -m"oops, didn't test code first, I'm an idiot. That should never happen."
@@ -126,3 +102,27 @@ cd elpa/
 ls
 rm starter-kit-*
 rm -rf starter-kit-*
+./runproject
+clear
+cd elpa
+rm -rf starter-kit-*
+exit
+clear
+cd ..
+./runproject.sh
+clear
+cd ..
+cd ..
+ls
+cd Joshua/
+ls
+cd 7
+ls
+scons
+./build/linux/out 
+cd ..
+cd ..
+cd Bryan/
+ls
+cd CLisp/
+ls
