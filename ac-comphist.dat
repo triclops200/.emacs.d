@@ -1,46 +1,94 @@
-((("global-set-key" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("args" .
-   [3 0 0 0])
-  ("parse-args" .
+((("primeSieve(int max) : LinkedList<Integer> - PrimeSieve" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("PrimeSieve" .
    [1 0 0 0 0 0 0 0 0 0])
-  ("company-emacs-eclim" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("company-emacs-eclim-setup" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("company" .
-   [1 0 0 0 0 0 1])
-  ("require" .
-   [3 0 0 0 0 0 0])
-  ("eclim" .
-   [0 0 0 0 1])
-  ("ArrayList - java.util" .
-   [0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("cloj.projects.p1" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("if" .
-   [1 0])
-  ("acc" .
-   [2 0 0])
-  ("recur" .
-   [1 0 0 0 0])
-  ("main" .
+  ("nanoTime() : long - System" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("LinkedList - java.util" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("n" .
+   [1])
+  ("Math" .
+   [0 0 0 1])
+  ("java" .
    [1 0 0 0])
-  ("crawler" .
-   [1 0 0 0 0 0 0])
-  ("starter-kit-lisp" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("lambda" .
-   [2 0 0 0 0 0])
-  ("local-set-key" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("kbd" .
-   [3 0 0])
-  ("paredit-wrap-round" .
-   [1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1])
-  ("define-key" .
+  ("primeSieve" .
    [1 0 0 0 0 0 0 0 0 0])
-  ("lisp" .
+  ("argv" .
+   [1 0 0 0])
+  ("load" .
    [1 0 0 0])
   ("lisp-mode" .
-   [0 0 0 0 0 0 0 1 0])))
+   [0 0 0 0 0 0 0 1 0])
+  ("lisp" .
+   [1 0 0 0])
+  ("define-key" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("paredit-wrap-round" .
+   [1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1])
+  ("kbd" .
+   [3 0 0])
+  ("local-set-key" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("lambda" .
+   [2 0 0 0 0 0])
+  ("starter-kit-lisp" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("crawler" .
+   [1 0 0 0 0 0 0])
+  ("main" .
+   [2 0 0 0])
+  ("recur" .
+   [1 0 0 0 0])
+  ("acc" .
+   [4 0 0])
+  ("if" .
+   [1 0])
+  ("cloj.projects.p1" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("ArrayList - java.util" .
+   [0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("eclim" .
+   [0 0 0 0 1])
+  ("require" .
+   [5 0 0 0 0 0 0])
+  ("company" .
+   [1 0 0 0 0 0 1])
+  ("company-emacs-eclim-setup" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("company-emacs-eclim" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("parse-args" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("args" .
+   [3 0 0 0])
+  ("global-set-key" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("slime" .
+   [2 0 0 0 0])
+  (":file" .
+   [3 0 0 0 0])
+  (":depends-on" .
+   [0 0 0 0 1 0 0 0 0 0 0])
+  ("utils/control.lisp" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("sqrt" .
+   [2 0 0 0])
+  ("defun" .
+   [2 0 0 0 0])
+  ("list" .
+   [1 0 0 0])
+  ("ctr" .
+   [8 0 0])
+  ("alist" .
+   [8 0 0 0 0])
+  ("str" .
+   [2 0 0])
+  ("rec" .
+   [2 0 0])
+  ("collect" .
+   [4 0 0 0 0 0 0])
+  ("matches" .
+   [1 0 0 0 0 0 0])
+  ("aref" .
+   [2 0 0 0])))

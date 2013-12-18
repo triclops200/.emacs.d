@@ -1,12 +1,35 @@
+(package-initialize)
+(require 'package)
+(defun fullpath-relative-to-current-file (file-relative-path)
+  (concat (file-name-directory (or load-file-name buffer-file-name)) file-relative-path)
+)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+
+(defvar my-packages '(
+					  clojure-mode
+					  clojure-test-mode
+					  cider
+					  company))
+
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+	(package-install p)))
+
+(package-initialize)
+(setq inferior-lisp-program "sbcl")
+(add-to-list 'load-path (fullpath-relative-to-current-file "slime"))
+(require 'slime-autoloads)
+(require 'slime)
+(slime-setup '(slime-fancy slime-repl slime-sbcl-exts slime-autodoc))
+(require 'slime-autoloads)
+
 (add-to-list 'load-path "~/.emacs.d/scripts")
-(load "slime-company.el")
 (load "indentfile.el")
 (load "gitpush.el")
 (load "notes.el")
-(require 'package)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
-(package-initialize)
+
+
 
 (global-unset-key (kbd "C-c g"))
 (global-unset-key (kbd "C-c n"))
@@ -41,14 +64,9 @@
 (add-hook 'after-init-hook 'global-company-mode)
 
 (setq inferior-lisp-program "sbcl --dynamic-space-size 2000")
-(defvar my-packages '(
-					  clojure-mode
-					  clojure-test-mode
-					  cider))
 
-(dolist (p my-packages)
-  (when (not (package-installed-p p))
-	(package-install p)))
+
+
 
 (defface esk-paren-face
    '((((class color) (background dark))
