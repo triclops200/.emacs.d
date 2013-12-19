@@ -81,5 +81,7 @@
                         '(("(\\|)" . 'esk-paren-face)))
 (font-lock-add-keywords 'lisp-mode
                         '(("(\\|)" . 'esk-paren-face)))
+(font-lock-add-keywords 'clojure-mode
+                        '(("(\\|)" . 'esk-paren-face)))
 
 (add-to-list 'auto-mode-alist '("\\.sml\\'" . scheme-mode))
