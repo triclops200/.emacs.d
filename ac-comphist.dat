@@ -1,94 +1,184 @@
-((("primeSieve(int max) : LinkedList<Integer> - PrimeSieve" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("PrimeSieve" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("nanoTime() : long - System" .
-   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("LinkedList - java.util" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("n" .
-   [1])
-  ("Math" .
-   [0 0 0 1])
-  ("java" .
-   [1 0 0 0])
-  ("primeSieve" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("argv" .
-   [1 0 0 0])
-  ("load" .
-   [1 0 0 0])
-  ("lisp-mode" .
-   [0 0 0 0 0 0 0 1 0])
-  ("lisp" .
-   [1 0 0 0])
-  ("define-key" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("paredit-wrap-round" .
-   [1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1])
-  ("kbd" .
-   [3 0 0])
-  ("local-set-key" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("lambda" .
-   [2 0 0 0 0 0])
-  ("starter-kit-lisp" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("crawler" .
-   [1 0 0 0 0 0 0])
-  ("main" .
-   [2 0 0 0])
-  ("recur" .
+((("nil" .
+   [1 0 0])
+  ("queue" .
    [1 0 0 0 0])
-  ("acc" .
-   [4 0 0])
-  ("if" .
+  ("of" .
    [1 0])
-  ("cloj.projects.p1" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("ArrayList - java.util" .
-   [0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("eclim" .
-   [0 0 0 0 1])
-  ("require" .
-   [5 0 0 0 0 0 0])
-  ("company" .
-   [1 0 0 0 0 0 1])
-  ("company-emacs-eclim-setup" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("company-emacs-eclim" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("parse-args" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("args" .
-   [3 0 0 0])
-  ("global-set-key" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("slime" .
-   [2 0 0 0 0])
-  (":file" .
-   [3 0 0 0 0])
-  (":depends-on" .
-   [0 0 0 0 1 0 0 0 0 0 0])
-  ("utils/control.lisp" .
-   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("sqrt" .
+  ("def" .
+   [3 0 0])
+  ("event-queue" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("printf" .
+   [1 0 0 0 0 0])
+  ("revrse_str" .
+   [0 0 0 3 0 0 0 0 0 0])
+  ("argc" .
    [2 0 0 0])
-  ("defun" .
-   [2 0 0 0 0])
-  ("list" .
-   [1 0 0 0])
-  ("ctr" .
+  ("nstr" .
+   [3 0 0 0])
+  ("include" .
+   [2 0 0 0 0 0 0])
+  ("fact" .
+   [2 0 0 0])
+  ("aref" .
+   [2 0 0 0])
+  ("matches" .
+   [1 0 0 0 0 0 0])
+  ("collect" .
+   [4 0 0 0 0 0 0])
+  ("rec" .
+   [4 0 0])
+  ("str" .
    [8 0 0])
   ("alist" .
    [8 0 0 0 0])
-  ("str" .
-   [2 0 0])
-  ("rec" .
-   [2 0 0])
-  ("collect" .
-   [4 0 0 0 0 0 0])
-  ("matches" .
+  ("ctr" .
+   [8 0 0])
+  ("list" .
+   [1 0 0 0])
+  ("defun" .
+   [3 0 0 0 0])
+  ("sqrt" .
+   [2 0 0 0])
+  ("utils/control.lisp" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":depends-on" .
+   [0 0 0 0 1 0 0 0 0 0 0])
+  (":file" .
+   [3 0 0 0 0])
+  ("slime" .
+   [2 0 0 0 0])
+  ("global-set-key" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("args" .
+   [3 0 0 0])
+  ("parse-args" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("company-emacs-eclim" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("company-emacs-eclim-setup" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("company" .
+   [1 0 0 0 0 0 1])
+  ("require" .
+   [5 0 0 0 0 0 0])
+  ("eclim" .
+   [0 0 0 0 1])
+  ("ArrayList - java.util" .
+   [0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("cloj.projects.p1" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("if" .
+   [5 0])
+  ("acc" .
+   [6 0 0])
+  ("recur" .
+   [3 0 0 0 0])
+  ("main" .
+   [2 0 0 0])
+  ("crawler" .
    [1 0 0 0 0 0 0])
-  ("aref" .
-   [2 0 0 0])))
+  ("starter-kit-lisp" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("lambda" .
+   [2 0 0 0 0 0])
+  ("local-set-key" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("kbd" .
+   [3 0 0])
+  ("paredit-wrap-round" .
+   [1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1])
+  ("define-key" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("lisp" .
+   [1 0 0 0])
+  ("lisp-mode" .
+   [0 0 0 0 0 0 0 1 0])
+  ("load" .
+   [1 0 0 0])
+  ("argv" .
+   [3 0 0 0])
+  ("primeSieve" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("java" .
+   [1 0 0 0])
+  ("Math" .
+   [0 0 0 1])
+  ("n" .
+   [1])
+  ("LinkedList - java.util" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("nanoTime() : long - System" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("PrimeSieve" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("primeSieve(int max) : LinkedList<Integer> - PrimeSieve" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("flet" .
+   [1 0 0 0])
+  ("find-color" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("custom-set-variables" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("show-paren-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("markovchain.core" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("word" .
+   [6 0 0 0])
+  ("update-" .
+   [0 0 0 0 0 0 1])
+  ("wordlist" .
+   [8 0 0 0 0 0 1 0])
+  ("amount" .
+   [6 0 0 1 0 0])
+  ("worddict" .
+   [3 0 0 0 0 0 0 0])
+  ("graph" .
+   [14 0 0 0 0])
+  ("update-link" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("from-word" .
+   [4 0 0 0 0 0 0 0 0])
+  ("fnil" .
+   [1 0 0 0])
+  ("text" .
+   [13 0 0 0])
+  ("add-text" .
+   [1 0 0 0 0 0 0 0])
+  ("t" .
+   [1])
+  ("words" .
+   [3 0 0 0 0])
+  ("to-words" .
+   [3 0 0 0 0 0 0 0])
+  ("a" .
+   [2])
+  ("add-word-link" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("from-words" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("to" .
+   [1 0])
+  ("sentence" .
+   [8 0 0 0 0 0 0 0])
+  ("clojure.string/split" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("add-sentence" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("sentences" .
+   [1 0 0 0 0 0 0 0 0])
+  ("last-word" .
+   [3 0 0 0 0 0 0 0 0])
+  ("select-random" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("next-word" .
+   [3 0 0 0 0 0 0 0 0])
+  ("tostr" .
+   [1 0 0 0 0])
+  ("replace-last-char" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("replace-last-two-char" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("clojure.string/replace" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])))

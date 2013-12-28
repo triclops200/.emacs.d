@@ -83,3 +83,4 @@
                         '(("(\\|)" . 'esk-paren-face)))
 
 (add-to-list 'auto-mode-alist '("\\.sml\\'" . scheme-mode))
+(global-linum-mode t)
