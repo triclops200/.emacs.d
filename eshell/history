@@ -1,35 +1,3 @@
-./newproject.sh 
-./runproject.sh 
-./runproject.sh 
-clear
-./buildproject.sh 
-./runproject
-clear
-cd ..
-mkdir Clojure
-cd Clojure/
-ls
-ls
-clear
-cd ..
-rm -rf Clojure/
-lein new 
-lein new app
-rm -rf app/
-lein new Clojure
-lein new clojure
-lein new cloj
-cd cloj/
-ls
-cd src/
-ls
-cd cloj/
-ls
-cd
-cd .emacs.d/
-ls
-cd elpa/
-ls
 rm starter-kit-*
 rm -rf starter-kit-*
 ./runproject
@@ -126,3 +94,35 @@ clear
 clear
 java Polymorphism
 java Polymorphism
+cp socket.clj ~/
+git pull origin master
+ls
+mv ~/socket.clj ./
+ls
+git pull origin master
+cd ..
+cd ..
+git add -A
+git add -A
+git commit -m "Fixes to project structure"
+git push origin master
+lein uberjar
+lein run
+lein uberjar
+lein run
+git stash
+git pull origin master
+lein
+lein run
+git log
+lein run
+lein run
+cd ../..
+clear
+lein
+lein uberjar
+lein uberjar
+lein uberjar
+lein uberjar
+lein uberjar
+lein uberjar
