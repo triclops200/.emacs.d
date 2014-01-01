@@ -109,3 +109,4 @@
 	(setq interprogram-cut-function 'xsel-cut-function)
 	(setq interprogram-paste-function 'xsel-paste-function)
 	(menu-bar-mode -1)))
+(global-linum-mode t)
