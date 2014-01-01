@@ -25,6 +25,8 @@
 (require 'slime-autoloads)
 
 (add-to-list 'load-path "~/.emacs.d/scripts")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized")
+(load-theme solarized-dark)
 (load "indentfile.el")
 (load "gitpush.el")
 (load "notes.el")
