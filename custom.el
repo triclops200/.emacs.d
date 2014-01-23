@@ -10,7 +10,11 @@
 					  clojure-mode
 					  clojure-test-mode
 					  cider
-					  company))
+					  company
+					  org
+					  solarized-theme
+					  paredit
+					  autocomplete))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -26,7 +30,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/scripts")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized")
-(load-theme solarized-dark)
+(load-theme 'solarized-dark t)
 (load "indentfile.el")
 (load "gitpush.el")
 (load "notes.el")
@@ -112,3 +116,51 @@
 	(setq interprogram-paste-function 'xsel-paste-function)
 	(menu-bar-mode -1)))
 (global-linum-mode t)
+(defun my:ac-c-headers-init ()
+    (require 'auto-complete-c-headers)
+	  (add-to-list 'ac-sources 'ac-source-c-headers))
+
+(add-hook 'c++-mode-hook 'my:ac-c-headers-init)
+(add-hook 'c-mode-hook 'my:ac-c-headers-init)
+
+(setq
+ python-shell-interpreter "ipython"
+ python-shell-interpreter-args ""
+ python-shell-prompt-regexp "In \\[[0-9]+\\]: "
+ python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "
+ python-shell-completion-setup-code
+   "from IPython.core.completerlib import module_completion"
+ python-shell-completion-module-string-code
+   "';'.join(module_completion('''%s'''))\n"
+ python-shell-completion-string-code
+   "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
+
+(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+(add-hook 'lisp-mode-hook #'enable-paredit-mode)
+(add-hook 'clojure-mode-hook #'enable-paredit-mode)
+(require 'org)
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
+(setq org-agenda-files (list "~/todo/main.org"))
+(defun replace-last-sexp ()
+  (interactive)
+  (let ((value (eval (preceding-sexp))))
+    (kill-sexp -1)
+    (insert (format "%s" value))))
+(define-key global-map "\C-x\C-j" 'replace-last-sexp)
+
+(defun erc-my-privmsg-sound (proc parsed)
+    (let* ((tgt (car (erc-response.command-args parsed)))
+           (privp (erc-current-nick-p tgt)))
+      (and
+       privp
+       (ding)
+       nil)))
+
+ (add-hook 'erc-server-PRIVMSG-functions
+            'erc-my-privmsg-sound)
+(add-hook 'erc-insert-post-hook 
+              (lambda () (goto-char (point-min)) 
+                (when (re-search-forward
+                       (regexp-quote  (erc-current-nick)) nil t) (ding))))
