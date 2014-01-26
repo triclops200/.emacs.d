@@ -1,8 +1,7 @@
-(package-initialize)
-(require 'package)
+;;(package-initialize)
+;;(require 'package)
 (defun fullpath-relative-to-current-file (file-relative-path)
-  (concat (file-name-directory (or load-file-name buffer-file-name)) file-relative-path)
-)
+  (concat (file-name-directory (or load-file-name buffer-file-name)) file-relative-path))
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
 
@@ -16,13 +15,13 @@
   (when (not (package-installed-p p))
 	(package-install p)))
 
-(package-initialize)
+;;(package-initialize)
 (setq inferior-lisp-program "sbcl")
 (add-to-list 'load-path (fullpath-relative-to-current-file "slime"))
 (require 'slime-autoloads)
 (require 'slime)
 (slime-setup '(slime-fancy slime-repl slime-sbcl-exts slime-autodoc))
-(require 'slime-autoloads)
+;;(require 'slime-autoloads)
 
 (add-to-list 'load-path "~/.emacs.d/scripts")
 (load "indentfile.el")
@@ -86,3 +85,18 @@
 
 (add-to-list 'auto-mode-alist '("\\.sml\\'" . scheme-mode))
 (global-linum-mode t)
+
+(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+(add-hook 'cider-mode-hook 'paredit-mode)
+(add-hook 'clojure-mode-hook 'paredit-mode)
+
+
+
+
+(require 'org)
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
+(setq org-agenda-files
+      (list "~/todo/main.org"))
+(add-hook 'org-mode-hook 'org-indent-mode)

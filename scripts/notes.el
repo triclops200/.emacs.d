@@ -1,5 +1,5 @@
 (defun string-repeat (x n)
-  (labels ((rec (acc n)
+  (cl-labels ((rec (acc n)
 				(if (= n 0)
 					acc
 				  (rec (concat acc x) (- n 1)))))
