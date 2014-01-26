@@ -19,20 +19,21 @@
 (defvar my-packages '(clojure-mode
 		      clojure-test-mode
 		      cider
-		      company
 		      org
 		      paredit
 		      auto-complete
 		      slime
-		      emacs-eclim))
+		      emacs-eclim
+		      ess
+		      znc))
 (defvar refresh t)
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (progn (if refresh
-	   (progn
-	     (setq refresh nil)
-	     (package-refresh-contents)))
-    (package-install p))))
+	       (progn
+		 (setq refresh nil)
+		 (package-refresh-contents)))
+	   (package-install p))))
 
 (setq inferior-lisp-program "sbcl")
 (add-to-list 'load-path (fullpath-relative-to-current-file "slime"))
@@ -59,7 +60,7 @@
 (global-set-key (kbd "C-c g c") 'git-commit)
 (global-set-key (kbd "C-c g y") 'git-pull)
 (global-set-key (kbd "C-c n b") 'box-word)
-(global-set-key (kbd "M-<tab>") 'company-complete)
+(global-set-key (kbd "M-<tab>") 'auto-complete)
 
 (require 'eclim)
 (require 'eclimd)
@@ -71,16 +72,12 @@
 ;; add the emacs-eclim source
 (require 'ac-emacs-eclim-source)
 (ac-emacs-eclim-config)
-(require 'company)
-(require 'company-emacs-eclim)
-(company-emacs-eclim-setup)
-(slime-setup '(slime-company))
 (defun eclim-run-test ()
   (interactive)
   (if (not (string= major-mode "java-mode"))
       (message "Sorry cannot run current buffer."))
   (compile (concat eclim-executable " -command java_junit -p " eclim--project-name " -t " (eclim-package-and-class))))
-(add-hook 'after-init-hook 'global-company-mode)
+(add-hook 'after-init-hook 'global-auto-complete-mode)
 
 (setq inferior-lisp-program "sbcl --dynamic-space-size 2000")
 
@@ -153,6 +150,8 @@
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
 (add-hook 'lisp-mode-hook #'enable-paredit-mode)
 (add-hook 'clojure-mode-hook #'enable-paredit-mode)
+(add-hook 'emacs-lisp-mode-hook #'enable-paredit-mode)
+
 (require 'org)
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
@@ -160,12 +159,16 @@
 (setq org-agenda-files
       (list "~/todo/main.org"))
 (add-hook 'org-mode-hook 'org-indent-mode)
+
 (defun replace-last-sexp ()
   (interactive)
   (let ((value (eval (preceding-sexp))))
     (kill-sexp -1)
     (insert (format "%s" value))))
 (define-key global-map "\C-x\C-j" 'replace-last-sexp)
+
+(require 'erc)
+
 
 (defun erc-my-privmsg-sound (proc parsed)
   (let* ((tgt (car (erc-response.command-args parsed)))
@@ -200,3 +203,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(load "znc_servers.el")
