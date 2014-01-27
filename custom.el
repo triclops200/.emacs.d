@@ -14,7 +14,7 @@
 					  org
 					  solarized-theme
 					  paredit
-					  autocomplete))
+					  auto-complete))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -46,7 +46,7 @@
 (global-set-key (kbd "C-c g c") 'git-commit)
 (global-set-key (kbd "C-c g y") 'git-pull)
 (global-set-key (kbd "C-c n b") 'box-word)
-(global-set-key (kbd "M-<tab>") 'company-complete)
+(global-set-key (kbd "M-<tab>") 'auto-complete)
 
 (require 'eclim)
 (require 'eclimd)
@@ -58,16 +58,15 @@
 ;; add the emacs-eclim source
 (require 'ac-emacs-eclim-source)
 (ac-emacs-eclim-config)
-(require 'company)
-(require 'company-emacs-eclim)
-(company-emacs-eclim-setup)
-(slime-setup '(slime-company))
+;;(require 'company)
+;;(require 'company-emacs-eclim)
+;;(company-emacs-eclim-setup)
+;;(slime-setup '(slime-company))
 (defun eclim-run-test ()
   (interactive)
   (if (not (string= major-mode "java-mode"))
 	  (message "Sorry cannot run current buffer."))
   (compile (concat eclim-executable " -command java_junit -p " eclim--project-name " -t " (eclim-package-and-class))))
-(add-hook 'after-init-hook 'global-company-mode)
 
 (setq inferior-lisp-program "sbcl --dynamic-space-size 2000")
 
@@ -136,8 +135,13 @@
    "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
 
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+(add-hook 'cider-mode-hook 'enable-paredit-mode)
 (add-hook 'lisp-mode-hook #'enable-paredit-mode)
 (add-hook 'clojure-mode-hook #'enable-paredit-mode)
+(add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
+(add-hook 'eshell-mode-hook 'enable-paredit-mode)
+(add-hook 'eshell-mode-hook 'auto-complete-mode)
+
 (require 'org)
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
@@ -150,6 +154,7 @@
     (insert (format "%s" value))))
 (define-key global-map "\C-x\C-j" 'replace-last-sexp)
 
+(require 'erc)
 (defun erc-my-privmsg-sound (proc parsed)
     (let* ((tgt (car (erc-response.command-args parsed)))
            (privp (erc-current-nick-p tgt)))
@@ -158,9 +163,22 @@
        (ding)
        nil)))
 
- (add-hook 'erc-server-PRIVMSG-functions
-            'erc-my-privmsg-sound)
+(add-hook 'erc-server-PRIVMSG-functions
+		  'erc-my-privmsg-sound)
 (add-hook 'erc-insert-post-hook 
-              (lambda () (goto-char (point-min)) 
-                (when (re-search-forward
-                       (regexp-quote  (erc-current-nick)) nil t) (ding))))
+		  (lambda () (goto-char (point-min)) 
+			(when (re-search-forward
+				   (regexp-quote  (erc-current-nick)) nil t) (ding))))
+
+(add-hook 'org-mode-hook 'org-indent-mode)
+
+(setq erc-fill-prefix "    ")
+(add-hook 'window-configuration-change-hook 
+	   '(lambda ()
+	      (setq erc-fill-column (- (window-width) 2))))
+
+(load "std.el")
+
+(define-key erc-mode-map "\C-c\C-v\C-m" 'minutes-to-seconds)
+
+
