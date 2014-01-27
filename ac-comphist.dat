@@ -1,33 +1,71 @@
-((("size" .
-   [0 0 0 1])
-  ("s" .
-   [3])
-  ("happy" .
-   [1 0 0 0 0])
-  ("String" .
-   [1 0 0 0 0 0])
-  ("ac-c-headers" .
-   [0 0 0 1 0 0 0 0 0 0 0 0])
-  ("printf" .
-   [2 0 0 0 0 2])
-  ("c++-mode-hook" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("set-compile-command-C" .
-   [0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("c-mode-hook" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("znc" .
+((("znc" .
    [1 0 0])
   ("erc" .
    [1 0 0])
   ("require" .
    [3 0 0 0 0 0 0])
+  ("MiningMarsh" .
+   [0 0 2 0 0 0 0 0 0 0 1])
+  ("te" .
+   [1 0])
+  ("timeperiod" .
+   [6 0 0 0 0 0 1 0 1 0])
+  ("median" .
+   [2 0 0 0 0 0])
+  ("time-MAM-seq" .
+   [0 0 0 0 0 0 1 0 0 0 0 0])
+  ("hour-seq-to-MAM-seq" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("time-seq-to-hour-seq" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("get-times" .
+   [1 0 0 0 0 0 0 0 0])
+  ("subreddit" .
+   [4 0 0 0 1 0 0 0 0])
+  ("hour-seq" .
+   [2 0 0 0 0 0 0 0])
+  ("Integer." .
+   [1 0 0 0 0 0 0 0])
+  ("time-seq" .
+   [1 0 0 0 0 0 0 0])
+  ("timeco/from-long" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("compressed-posts" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("posts" .
+   [1 0 0 0 0])
+  ("clj-time" .
+   [1 0 0 0 0 0 0 0])
+  ("list" .
+   [4 0 0 0])
+  ("fast-sieve" .
+   [0 0 0 0 0 0 0 0 0 1])
+  ("values" .
+   [2 0 0 0 0 0])
+  ("unsigned-byte" .
+   [0 0 0 0 3 0 0 0 0 0 0 0 0])
+  ("pq" .
+   [3 0])
+  ("queue" .
+   [1 0 0 0 0])
+  ("debug" .
+   [1 0 0 1 0])
+  ("safety" .
+   [1 0 1 0 0 0])
+  ("speed" .
+   [2 0 0 0 0])
+  ("optimize" .
+   [0 0 0 0 0 2 0 0])
+  ("fixnum" .
+   [5 0 0 0 0 0])
+  ("declare" .
+   [2 0 0 0 0 0 0])
   ("load" .
    [1 0 0 0])
   ("custom-set-variables" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
   ("add-hook" .
-   [1 0 0 0 0 1 0 1])
+   [1 0 0 0 0 0 0 0])
   ("emacs" .
    [1 0 0 0 0])
   ("emacs-lisp-mode-hook" .

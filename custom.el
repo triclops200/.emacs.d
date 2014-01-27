@@ -43,7 +43,7 @@
 (require 'slime-autoloads)
 (require 'slime)
 (slime-setup '(slime-fancy slime-repl slime-sbcl-exts slime-autodoc))
-;;(require 'slime-autoloads)
+
 
 (add-to-list 'load-path "~/.emacs.d/scripts")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized")
@@ -153,6 +153,7 @@
  "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
 
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+(add-hook 'cider-mode-hook 'enable-paredit-mode)
 (add-hook 'lisp-mode-hook #'enable-paredit-mode)
 (add-hook 'clojure-mode-hook #'enable-paredit-mode)
 (add-hook 'emacs-lisp-mode-hook #'enable-paredit-mode)
