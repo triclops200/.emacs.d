@@ -16,16 +16,19 @@
 
 
 
-(defvar my-packages '(clojure-mode
-		      clojure-test-mode
-		      cider
-		      org
-		      paredit
-		      auto-complete
-		      slime
-		      emacs-eclim
-		      ess
-		      znc))
+(defvar my-packages)
+(setq my-packages '(clojure-mode
+		    clojure-test-mode
+		    cider
+		    org
+		    paredit
+		    auto-complete
+		    slime
+		    emacs-eclim
+		    ess
+		    znc
+		    ac-c-headers
+		    malabar-mode))
 (defvar refresh t)
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -128,8 +131,10 @@
 (global-linum-mode t)
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
 (add-hook 'cider-mode-hook 'paredit-mode)
+
+
 (defun my:ac-c-headers-init ()
-  (require 'auto-complete-c-headers)
+  (require 'ac-c-headers)
   (add-to-list 'ac-sources 'ac-source-c-headers))
 
 (add-hook 'c++-mode-hook 'my:ac-c-headers-init)
@@ -204,3 +209,40 @@
  ;; If there is more than one, they won't work right.
  )
 (load "znc_servers.el")
+(setq auto-mode-alist
+      (cons '("SConstruct" . python-mode) auto-mode-alist))
+(setq auto-mode-alist
+      (cons '("SConscript" . python-mode) auto-mode-alist))
+(defun find-sconstruct ()
+  "recursively searches upwards from buffer's current dir for file named SConstruct and returns that dir. Or nil if not found or if buffer is not visiting a file"
+  (labels
+      ((find-sconstruct-r (path)
+			  (let* ((parent (file-name-directory path))    
+				 (possible-file (concat parent "SConstruct")))
+			    (cond
+			     ((file-exists-p possible-file)
+			      (throw 'found-it possible-file))
+			     ((string= "/SConstruct" possible-file)
+			      (error "No SConstruct found"))
+			     (t (find-sconstruct-r (directory-file-name parent)))))))
+    (if (buffer-file-name)
+    	(catch 'found-it
+    	  (find-sconstruct-r (buffer-file-name)))
+      (error "Buffer is not visiting a file"))))
+
+
+(defun project-root ()    
+  (file-name-directory (find-sconstruct)))
+
+(defun set-compile-command-C ()
+  (setq compile-command (concat "cd " (project-root) " && scons")))
+
+(add-hook 'c-mode-hook 'set-compile-command-C)
+(add-hook 'c++-mode-hook 'set-compile-command-C)
+(setq semantic-default-submodes '(global-semantic-idle-scheduler-mode
+                                  global-semanticdb-minor-mode
+                                  global-semantic-idle-summary-mode
+                                  global-semantic-mru-bookmark-mode))
+(semantic-mode 1)
+(require 'malabar-mode)
+(add-to-list 'auto-mode-alist '("\\.java\\'" . malabar-mode))

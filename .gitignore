@@ -4,3 +4,4 @@ games/*
 auto*
 elpa*
 znc_servers.el
+semanticdb/*
