@@ -344,8 +344,10 @@
 
 (setq
  mu4e-view-show-images t
-  mu4e-view-image-max-width 800
- w3m-command "/usr/bin/w3m")
+ mu4e-view-image-max-width 800
+ w3m-command "/usr/bin/w3m"
+ mu4e-html-renderer 'w3m
+ mu4e-html2text-command "w3m -dump -T text/html")
 (require 'org-mu4e)
 (setq org-mu4e-convert-to-html t)
 (defalias 'org-mail 'org-mu4e-compose-org-mode)
