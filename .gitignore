@@ -7,3 +7,4 @@ elpa*
 znc_servers.el
 semanticdb/*
 ac-comphist.el
+ac-comphist.dat
