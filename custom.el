@@ -28,7 +28,9 @@
 		    ess
 		    znc
 		    ac-c-headers
-		    malabar-mode))
+		    malabar-mode
+		    auctex
+		    cdlatex))
 (defvar refresh t)
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -37,6 +39,7 @@
 	  (setq refresh nil)
 	  (package-refresh-contents)))
     (package-install p)))
+(require 'org-latex)
 
 (setq inferior-lisp-program "sbcl")
 (add-to-list 'load-path (fullpath-relative-to-current-file "slime"))
@@ -251,6 +254,9 @@
 (require 'malabar-mode)
 (add-to-list 'auto-mode-alist '("\\.java\\'" . malabar-mode))
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
+(setq
+ mu4e-view-show-images t
+ w3m-command "/usr/bin/w3m")
 (require 'mu4e)
 (setq mu4e-sent-folder "/starfoxprime/sent"
       mu4e-drafts-folder "/starfoxprime/drafts"
@@ -334,10 +340,12 @@
 	  '(lambda ()
 	     (setq erc-fill-column (- (window-width) 2))))
 ;; use imagemagick, if available
-(when (fboundp 'imagemagick-register-types)
-  (imagemagick-register-types))
+(imagemagick-register-types)
+
 (setq
  mu4e-view-show-images t
- mu4e-html2text-command "w3m -dump -T text/html"
- w3m-command "/usr/bin/w3m"
- mu4e-view-prefer-html t)
+  mu4e-view-image-max-width 800
+ w3m-command "/usr/bin/w3m")
+(require 'org-mu4e)
+(setq org-mu4e-convert-to-html t)
+(defalias 'org-mail 'org-mu4e-compose-org-mode)
