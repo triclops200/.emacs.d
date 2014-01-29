@@ -3,6 +3,7 @@ auto-save-list/*
 games/*
 auto*
 elpa*
+*~
 znc_servers.el
 semanticdb/*
 ac-comphist.el
