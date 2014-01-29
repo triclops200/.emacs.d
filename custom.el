@@ -290,25 +290,25 @@
 	 (smtpmail-default-smtp-server "pod51000.outlook.com")
 	 (smtpmail-smtp-server "pod51000.outlook.com")
 	 (smtpmail-stream-type starttls)
-	 (smtpmail-smtp-service 587))
-	("vdinh3"
-	 (mu4e-sent-folder "/vdinh3/sent")
-	 (mu4e-drafts-folder "/vdinh3/drafts")
-	 (user-mail-address "vdinh3@masonlive.gmu.edu")
-	 (message-signature-file ".vdinh3.txt")
-	 (smtpmail-default-smtp-server "pod51000.outlook.com")
-	 (smtpmail-smtp-server "pod51000.outlook.com")
-	 (smtpmail-stream-type starttls)
-	 (smtpmail-smtp-service 587))
-	("lvkdinh"
-	 (mu4e-sent-folder "/lvkdinh/sent")
-	 (mu4e-drafts-folder "/lvkdinh/drafts")
-	 (user-mail-address "lvkdinh@gmail.com")
-	 (message-signature-file ".lvkdinh.txt")
-	 (smtpmail-default-smtp-server "smtp.googlemail.com")
-	 (smtpmail-smtp-server "smtp.googlemail.com")
-	 (smtpmail-stream-type ssl)
-	 (smtpmail-smtp-service 465))))
+	 (smtpmail-smtp-service 587))))
+'("vdinh3"
+  (mu4e-sent-folder "/vdinh3/sent")
+  (mu4e-drafts-folder "/vdinh3/drafts")
+  (user-mail-address "vdinh3@masonlive.gmu.edu")
+  (message-signature-file ".vdinh3.txt")
+  (smtpmail-default-smtp-server "pod51000.outlook.com")
+  (smtpmail-smtp-server "pod51000.outlook.com")
+  (smtpmail-stream-type starttls)
+  (smtpmail-smtp-service 587))
+'("lvkdinh"
+  (mu4e-sent-folder "/lvkdinh/sent")
+  (mu4e-drafts-folder "/lvkdinh/drafts")
+  (user-mail-address "lvkdinh@gmail.com")
+  (message-signature-file ".lvkdinh.txt")
+  (smtpmail-default-smtp-server "smtp.googlemail.com")
+  (smtpmail-smtp-server "smtp.googlemail.com")
+  (smtpmail-stream-type ssl)
+  (smtpmail-smtp-service 465))
 
 (require 'tls)
 
@@ -333,3 +333,11 @@
 (add-hook 'window-configuration-change-hook 
 	  '(lambda ()
 	     (setq erc-fill-column (- (window-width) 2))))
+;; use imagemagick, if available
+(when (fboundp 'imagemagick-register-types)
+  (imagemagick-register-types))
+(setq
+ mu4e-view-show-images t
+ mu4e-html2text-command "w3m -dump -T text/html"
+ w3m-command "/usr/bin/w3m"
+ mu4e-view-prefer-html t)
