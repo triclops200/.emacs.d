@@ -1,0 +1,7 @@
+(require 'bigint)
+
+(defun fact (n)
+  (let ((acc (bigint-int-to-bigint 1)))
+	(dotimes (i n)
+	  (setf acc (bigint-multiply acc (bigint-int-to-bigint (+ 1 i)))))
+	(bigint-to-string acc)))

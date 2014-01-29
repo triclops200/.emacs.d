@@ -32,11 +32,11 @@
 (defvar refresh t)
 (dolist (p my-packages)
   (when (not (package-installed-p p))
-    (if refresh
-	(progn
-	  (setq refresh nil)
-	  (package-refresh-contents)))
-    (package-install p)))
+    (progn (if refresh
+	       (progn
+		 (setq refresh nil)
+		 (package-refresh-contents)))
+	   (package-install p))))
 
 (setq inferior-lisp-program "sbcl")
 (add-to-list 'load-path (fullpath-relative-to-current-file "slime"))
@@ -132,6 +132,7 @@
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
 (add-hook 'cider-mode-hook 'paredit-mode)
 
+
 (defun my:ac-c-headers-init ()
   (require 'ac-c-headers)
   (add-to-list 'ac-sources 'ac-source-c-headers))
@@ -200,12 +201,9 @@
  '(cursor-color nil)
  '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" default)))
  '(foreground-color nil)
- '(send-mail-function (quote smtpmail-send-it))
  '(show-paren-mode t)
- '(smtpmail-smtp-server "smtp.googlemail.com")
- '(smtpmail-smtp-service 465)
  '(tool-bar-mode nil)
- '(znc-servers (quote (("Triclops200.com" 11337 nil ((Triclops200 "Triclops200" "Superfly123")))))))
+ )
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -213,6 +211,9 @@
  ;; If there is more than one, they won't work right.
  )
 (load "znc_servers.el")
+<<<<<<< HEAD
+
+=======
 (setq auto-mode-alist
       (cons '("SConstruct" . python-mode) auto-mode-alist))
 (setq auto-mode-alist
@@ -250,86 +251,4 @@
 (semantic-mode 1)
 (require 'malabar-mode)
 (add-to-list 'auto-mode-alist '("\\.java\\'" . malabar-mode))
-(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
-(require 'mu4e)
-(setq mu4e-sent-folder "/starfoxprime/sent"
-      mu4e-drafts-folder "/starfoxprime/drafts"
-      user-mail-address "starfoxprime@gmail.com"
-      message-signature-file ".starfoxprime.txt"
-      smtpmail-default-smtp-server "smtp.googlemail.com"
-      smtpmail-stream-type 'ssl
-      smtpmail-smtp-service 465)
-(setq
- mu4e-get-mail-command "offlineimap")
-
-(defvar my-mu4e-account-alist)
-(setf my-mu4e-account-alist
-      '(("starfoxprime"
-	 (mu4e-sent-folder "/starfoxprime/sent")
-	 (mu4e-drafts-folder "/starfoxprime/drafts")
-	 (user-mail-address "starfoxprime@gmail.com")
-	 (message-signature-file ".starfoxprime.txt")
-	 (smtpmail-default-smtp-server "smtp.googlemail.com")
-	 (smtpmail-smtp-server "smtp.googlemail.com")
-	 (smtpmail-stream-type ssl)
-	 (smtpmail-smtp-service 465))
-	("bryanhoyle1"
-	 (mu4e-sent-folder "/bryanhoyle1/sent")
-	 (mu4e-drafts-folder "/bryanhoyle1/drafts")
-	 (user-mail-address "bryan.hoyle1@googlemail.com")
-	 (message-signature-file ".bryanhoyle1.txt")
-	 (smtpmail-default-smtp-server "smtp.googlemail.com")
-	 (smtpmail-smtp-server "smtp.googlemail.com")
-	 (smtpmail-stream-type ssl)
-	 (smtpmail-smtp-service 465))
-	("bhoyle"
-	 (mu4e-sent-folder "/bhoyle/sent")
-	 (mu4e-drafts-folder "/bhoyle/drafts")
-	 (user-mail-address "bhoyle@masonlive.gmu.edu")
-	 (message-signature-file ".bhoyle.txt")
-	 (smtpmail-default-smtp-server "pod51000.outlook.com")
-	 (smtpmail-smtp-server "pod51000.outlook.com")
-	 (smtpmail-stream-type starttls)
-	 (smtpmail-smtp-service 587))
-	("vdinh3"
-	 (mu4e-sent-folder "/vdinh3/sent")
-	 (mu4e-drafts-folder "/vdinh3/drafts")
-	 (user-mail-address "vdinh3@masonlive.gmu.edu")
-	 (message-signature-file ".vdinh3.txt")
-	 (smtpmail-default-smtp-server "pod51000.outlook.com")
-	 (smtpmail-smtp-server "pod51000.outlook.com")
-	 (smtpmail-stream-type starttls)
-	 (smtpmail-smtp-service 587))
-	("lvkdinh"
-	 (mu4e-sent-folder "/lvkdinh/sent")
-	 (mu4e-drafts-folder "/lvkdinh/drafts")
-	 (user-mail-address "lvkdinh@gmail.com")
-	 (message-signature-file ".lvkdinh.txt")
-	 (smtpmail-default-smtp-server "smtp.googlemail.com")
-	 (smtpmail-smtp-server "smtp.googlemail.com")
-	 (smtpmail-stream-type ssl)
-	 (smtpmail-smtp-service 465))))
-
-(require 'tls)
-
-(defun my-mu4e-set-account ()
-  "Set the account for composing a message."
-  (let* ((account
-	  (if mu4e-compose-parent-message
-	      (let ((maildir (mu4e-message-field mu4e-compose-parent-message :maildir)))
-		(string-match "/\\(.*?\\)/" maildir)
-		(match-string 1 maildir))
-	    (completing-read (format "Compose with account: (%s) "
-				     (mapconcat #'(lambda (var) (car var)) my-mu4e-account-alist "/"))
-			     (mapcar #'(lambda (var) (car var)) my-mu4e-account-alist)
-			     nil t nil nil (caar my-mu4e-account-alist))))
-	 (account-vars (cdr (assoc account my-mu4e-account-alist))))
-    (if account-vars
-	(mapc #'(lambda (var)
-		  (set (car var) (cadr var)))
-	      account-vars)
-      (error "No email account found"))))
-(add-hook 'mu4e-compose-pre-hook 'my-mu4e-set-account)
-(add-hook 'window-configuration-change-hook 
-	  '(lambda ()
-	     (setq erc-fill-column (- (window-width) 2))))
+>>>>>>> 9fca52379782ef6367b82d30093d1dfd72b0f78f
