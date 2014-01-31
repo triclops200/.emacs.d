@@ -28,7 +28,6 @@
 		    ess
 		    znc
 		    ac-c-headers
-		    malabar-mode
 		    auctex
 		    cdlatex))
 (defvar refresh t)
@@ -251,8 +250,6 @@
                                   global-semantic-idle-summary-mode
                                   global-semantic-mru-bookmark-mode))
 (semantic-mode 1)
-(require 'malabar-mode)
-(add-to-list 'auto-mode-alist '("\\.java\\'" . malabar-mode))
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
 (setq
  mu4e-view-show-images t
@@ -351,3 +348,18 @@
 (require 'org-mu4e)
 (setq org-mu4e-convert-to-html t)
 (defalias 'org-mail 'org-mu4e-compose-org-mode)
+(custom-set-variables
+ '(haskell-mode-hook '(turn-on-haskell-indentation)))
+
+
+(quote (defun html2text ()
+	 "Replacement for standard html2text using shr."
+	 (interactive)
+	 (let ((dom (libxml-parse-html-region (point-min) (point-max))))
+	   (erase-buffer)
+	   (shr-insert-document dom)
+	   (goto-char (point-min)))))
+(setq eclimd-default-workspace "~/CS310")
+(require 'eclim)
+(global-eclim-mode)
+(require 'eclimd)
