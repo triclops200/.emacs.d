@@ -29,7 +29,10 @@
 		    znc
 		    ac-c-headers
 		    auctex
-		    cdlatex))
+		    cdlatex
+		    haskell-mode
+		    ghc
+		    ghci-completion))
 (defvar refresh t)
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -363,3 +366,8 @@
 (require 'eclim)
 (global-eclim-mode)
 (require 'eclimd)
+(defun rating (n out-of)
+  (concat (make-string n ?★)
+	  (make-string (- out-of n) ?☆)))
+ (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
