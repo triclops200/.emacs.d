@@ -1,5 +1,11 @@
-((("quote" .
-   [1 0 0 0 0])
+((("load" .
+   [1 0 0 0])
+  ("add" .
+   [1 0 0])
+  ("trie" .
+   [1 0 0 0])
+  ("quote" .
+   [2 0 0 0 0])
   ("mu4e-html-renderer" .
    [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("imagemagick-register-types" .

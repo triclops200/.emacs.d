@@ -1,0 +1,11 @@
+(add-hook 'after-init-hook 'global-auto-complete-mode)
+(defun my-ac-cc-mode-setup ()
+  (setq ac-sources (append '(ac-source-clang ac-source-yasnippet) ac-sources)))
+(add-hook 'c-mode-common-hook 'my-ac-cc-mode-setup)
+(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+(defun my:ac-c-headers-init ()
+  (require 'ac-c-headers)
+  (add-to-list 'ac-sources 'ac-source-c-headers))
+
+(add-hook 'c++-mode-hook 'my:ac-c-headers-init)
+(add-hook 'c-mode-hook 'my:ac-c-headers-init)

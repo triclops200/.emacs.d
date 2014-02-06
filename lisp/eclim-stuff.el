@@ -1,0 +1,17 @@
+(require 'eclim)
+(require 'eclimd)
+(global-eclim-mode)
+(setq eclimd-default-workspace "~/CS310")
+(add-to-list 'eclim--file-coding-system-mapping '("utf-8-emacs-dos" . "utf-8"))
+;; regular auto-complete initialization
+(require 'auto-complete-clang)
+(require 'auto-complete-config)
+(ac-config-default)
+;; add the emacs-eclim source
+(require 'ac-emacs-eclim-source)
+(ac-emacs-eclim-config)
+(defun eclim-run-test ()
+  (interactive)
+  (if (not (string= major-mode "java-mode"))
+      (message "Sorry cannot run current buffer."))
+  (compile (concat eclim-executable " -command java_junit -p " eclim--project-name " -t " (eclim-package-and-class))))

@@ -5,7 +5,10 @@ auto*
 elpa*
 *~
 ~*
-znc_servers.el
+*znc_servers.el
+*secret*
+url/*
+url
 semanticdb/*
 ac-comphist.el
 ac-comphist.dat
