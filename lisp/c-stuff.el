@@ -21,7 +21,8 @@
 (defun project-root ()    
   (file-name-directory (find-sconstruct)))
 (defun set-compile-command-C ()
-  (setq compile-command (concat "cd " (project-root) " && scons")))
+  (setq compile-command (concat "cd " (project-root) " && scons"))
+  (local-set-key (kbd "C-c C-k") 'compile))
 (add-hook 'c-mode-hook 'set-compile-command-C)
 (add-hook 'c++-mode-hook 'set-compile-command-C)
 

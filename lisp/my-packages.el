@@ -16,6 +16,7 @@
 		    ess
 		    znc
 		    ac-c-headers
+		    auto-complete-clang
 		    auctex
 		    cdlatex))
 (defvar refresh t)

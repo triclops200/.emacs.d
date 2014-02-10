@@ -39,3 +39,10 @@
     (setq interprogram-cut-function 'xsel-cut-function)
     (setq interprogram-paste-function 'xsel-paste-function)
     (menu-bar-mode -1)))
+
+
+(require 'ansi-color)
+(defun my-colorize-compilation-buffer ()
+  (when (eq major-mode 'compilation-mode)
+    (ansi-color-apply-on-region compilation-filter-start (point-max))))
+(add-hook 'compilation-filter-hook 'my-colorize-compilation-buffer)

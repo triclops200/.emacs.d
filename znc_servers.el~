@@ -1,1 +1,0 @@
-(custom-set-variables '(znc-servers (quote (("Triclops200.com" 11337 nil ((Triclops200 "Triclops200" "Superfly2@")))))))
