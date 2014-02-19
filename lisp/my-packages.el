@@ -17,6 +17,7 @@
 		    znc
 		    ac-c-headers
 		    auto-complete-clang
+		    smart-tabs-mode
 		    auctex
 		    cdlatex))
 (defvar refresh t)

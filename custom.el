@@ -51,3 +51,6 @@
 (load "email-stuff.el")
 (load "haskell-stuff.el")
 (load "znc_servers.el")
+(setq initial-scratch-message "")
+(setq inhibit-startup-message t)
+
