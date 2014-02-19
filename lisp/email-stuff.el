@@ -69,7 +69,7 @@
  mu4e-view-show-images t
  mu4e-view-image-max-width 800
  mu4e-update-interval 600
- mu4e-html2text-command "html2text -nobs"
+ mu4e-html-renderer 'w3m
  mu4e-view-prefer-html t)
 (require 'org-mu4e)
 (setq org-mu4e-convert-to-html t)

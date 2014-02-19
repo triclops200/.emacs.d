@@ -19,7 +19,8 @@
 		    auto-complete-clang
 		    smart-tabs-mode
 		    auctex
-		    cdlatex))
+		    cdlatex
+			w3m))
 (defvar refresh t)
 (dolist (p my-packages)
   (when (not (package-installed-p p))
