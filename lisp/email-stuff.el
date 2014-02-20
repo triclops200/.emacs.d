@@ -64,13 +64,23 @@
 	     (setq erc-fill-column (- (window-width) 2))))
 ;; use imagemagick, if available
 (imagemagick-register-types)
-
+(require 'w3m)
+(load "mu4e-view")
 (setq
  mu4e-view-show-images t
  mu4e-view-image-max-width 800
  mu4e-update-interval 600
- mu4e-html-renderer 'w3m
  mu4e-view-prefer-html t)
+
+
+  (defun html2text ()
+    "Replacement for standard html2text using shr."
+    (interactive)
+    (let ((dom (libxml-parse-html-region (point-min) (point-max))))
+       (erase-buffer)
+       (shr-insert-document dom)
+       (goto-char (point-min))))
+
 (require 'org-mu4e)
 (setq org-mu4e-convert-to-html t)
 (defalias 'org-mail 'org-mu4e-compose-org-mode)
