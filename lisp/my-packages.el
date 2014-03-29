@@ -20,6 +20,9 @@
 		    smart-tabs-mode
 		    auctex
 		    cdlatex
+			xkcd
+			sos
+			evil
 			w3m))
 (defvar refresh t)
 (dolist (p my-packages)

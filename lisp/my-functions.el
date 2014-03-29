@@ -6,3 +6,4 @@
     (kill-sexp -1)
     (insert (format "%s" value))))
 (define-key global-map "\C-x\C-j" 'replace-last-sexp)
+

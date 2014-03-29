@@ -31,6 +31,7 @@
 (add-to-list 'custom-theme-load-path
 	     "~/.emacs.d/emacs-color-theme-solarized")
 (load-theme 'solarized-dark t)
+(quote (set-default-font "-*-Monaco-normal-normal-normal-monospace-13-*-*-*-m-0-iso10646-1"))
 (set-default-font "-bitstream-Bitstream Vera Sans Mono-normal-normal-normal-monospace-13-*-*-*-m-0-iso10646-1")
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 (add-to-list 'load-path "~/.emacs.d/lisp/secrets/")
@@ -50,6 +51,8 @@
 (load "semantic-stuff.el")
 (load "email-stuff.el")
 (load "haskell-stuff.el")
+(load "as-stuff.el")
+(load "evil-stuff.el")
 (load "znc_servers.el")
 (setq initial-scratch-message "")
 (setq inhibit-startup-message t)
