@@ -23,6 +23,7 @@
 			xkcd
 			sos
 			evil
+			evil-paredit
 			w3m))
 (defvar refresh t)
 (dolist (p my-packages)
