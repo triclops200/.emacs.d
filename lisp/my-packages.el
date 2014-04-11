@@ -24,6 +24,7 @@
 			sos
 			evil
 			evil-paredit
+			markdown-mode
 			w3m))
 (defvar refresh t)
 (dolist (p my-packages)

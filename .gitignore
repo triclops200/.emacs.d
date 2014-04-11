@@ -1,5 +1,6 @@
 eshell/*
 auto-save-list/*
+ac-comphist.dat
 games/*
 auto*
 elpa*
