@@ -8,6 +8,7 @@
 (setq my-packages '(clojure-mode
 		    clojure-test-mode
 		    cider
+			cider-tracing
 		    org
 		    paredit
 		    auto-complete
