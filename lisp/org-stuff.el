@@ -34,3 +34,22 @@
 	  '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
 		"pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
 		"pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+(setq org-src-fontify-natively t)
+(setq org-export-htmlize-output-type 'css)
+(setq org-src-preserve-indentation t)
+
+(require 'ob-clojure)
+
+(org-babel-do-load-languages
+      'org-babel-load-languages
+      '((emacs-lisp . t)
+        (R . t)
+		(python . t)
+		(C . t)
+		(clojure . t)
+		(haskell . t)
+		(ruby . t)
+		(lisp . t)
+		(org . t)
+		(scheme . t)
+		(sh . t)))

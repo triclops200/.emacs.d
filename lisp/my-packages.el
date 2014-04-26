@@ -26,6 +26,7 @@
 			evil
 			evil-paredit
 			markdown-mode
+			htmlize
 			w3m))
 (defvar refresh t)
 (dolist (p my-packages)

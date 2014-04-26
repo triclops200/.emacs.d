@@ -1,10 +1,8 @@
 (require 'eclim)
 (require 'eclimd)
-(global-eclim-mode)
 (setq eclimd-default-workspace "~/CS310")
 (add-to-list 'eclim--file-coding-system-mapping '("utf-8-emacs-dos" . "utf-8"))
 ;; regular auto-complete initialization
-(require 'auto-complete-clang)
 (require 'auto-complete-config)
 (ac-config-default)
 ;; add the emacs-eclim source
