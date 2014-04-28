@@ -1,0 +1,1 @@
+("~/cs262/" "~/CS310/project4/" "~/hilbert/" "~/.emacs.d/" "~/testapp/" "~/myapp/")
