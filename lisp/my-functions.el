@@ -1,5 +1,6 @@
 (defun fullpath-relative-to-current-file (file-relative-path)
   (concat (file-name-directory (or load-file-name buffer-file-name)) file-relative-path))
+
 (defun replace-last-sexp ()
   (interactive)
   (let ((value (eval (preceding-sexp))))

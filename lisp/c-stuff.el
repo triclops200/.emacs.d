@@ -17,7 +17,7 @@
     (if (buffer-file-name)
     	(catch 'found-it
     	  (find-sconstruct-r (buffer-file-name)))
-      (error "Buffer is not visiting a file"))))
+      (quote "Buffer is not visiting a file"))))
 (defun project-root ()    
   (file-name-directory (find-sconstruct)))
 (defun set-compile-command-C ()

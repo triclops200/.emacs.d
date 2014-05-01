@@ -41,6 +41,7 @@
 (require 'ob-clojure)
 
 (org-babel-do-load-languages
+<<<<<<< HEAD
  'org-babel-load-languages
  '((emacs-lisp . t)
    (R . t)
@@ -62,6 +63,20 @@
         ("j" "Journal" entry (file+datetree "~/org/journal.org")
 		 "* %?\nEntered on %U\n  %i\n  %a")))
 
+=======
+      'org-babel-load-languages
+      '((emacs-lisp . t)
+        (R . t)
+		(python . t)
+		(C . t)
+		(clojure . t)
+		(haskell . t)
+		(ruby . t)
+		(lisp . t)
+		(org . t)
+		(scheme . t)
+		(sh . t)))
+
 (defun my-org-inline-css-hook (exporter)
   "Insert custom inline css"
   (when (eq exporter 'html)
@@ -82,3 +97,4 @@
 (eval-after-load 'ox
   '(progn
      (add-hook 'org-export-before-processing-hook 'my-org-inline-css-hook)))
+>>>>>>> 341c7029b4bb5a31f7ad56dc076a4eb4ad8f389d

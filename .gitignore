@@ -18,3 +18,5 @@ ac-comphist.el
 *#
 *\#
 ac-comphist.dat
+*comphist*
+/ac-comphist.dat
