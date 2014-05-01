@@ -41,15 +41,24 @@
 (require 'ob-clojure)
 
 (org-babel-do-load-languages
-      'org-babel-load-languages
-      '((emacs-lisp . t)
-        (R . t)
-		(python . t)
-		(C . t)
-		(clojure . t)
-		(haskell . t)
-		(ruby . t)
-		(lisp . t)
-		(org . t)
-		(scheme . t)
-		(sh . t)))
+ 'org-babel-load-languages
+ '((emacs-lisp . t)
+   (R . t)
+   (python . t)
+   (C . t)
+   (clojure . t)
+   (haskell . t)
+   (ruby . t)
+   (lisp . t)
+   (org . t)
+   (scheme . t)
+   (sh . t)))
+
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+(define-key global-map "\C-cc" 'org-capture)
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
+		 "* TODO %?\n  %i\n  %a")
+        ("j" "Journal" entry (file+datetree "~/org/journal.org")
+		 "* %?\nEntered on %U\n  %i\n  %a")))
+

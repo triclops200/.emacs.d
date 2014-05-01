@@ -55,7 +55,6 @@
 (load "haskell-stuff.el")
 (load "as-stuff.el")
 (load "evil-stuff.el")
-(load "minimap-stuff.el")
 (load "tern-stuff.el")
 (load "znc_servers.el")
 (setq initial-scratch-message "")

@@ -91,3 +91,7 @@
   (let ((org-html-with-latex 'imagemagick))
 	(org-export-string-as
 	 data 'html t)))
+
+(add-hook 'mu4e-view-mode-hook
+		  '(lambda ()
+			 (evil-local-mode -1)))
