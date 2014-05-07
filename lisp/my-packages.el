@@ -21,6 +21,7 @@
 		    smart-tabs-mode
 		    auctex
 		    cdlatex
+			jedi
 			xkcd
 			sos
 			evil

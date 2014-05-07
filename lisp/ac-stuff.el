@@ -18,6 +18,9 @@
 (eval-after-load "auto-complete"
   '(add-to-list 'ac-modes 'cider-repl-mode))
 
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
+
 (defun my-ac-cc-mode-setup ()
   (setq ac-sources (append '(ac-source-clang ac-source-yasnippet) ac-sources)))
 (add-hook 'c-mode-common-hook 'my-ac-cc-mode-setup)
