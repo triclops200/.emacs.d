@@ -6,10 +6,18 @@
 (require 'auto-complete-config)
 (ac-config-default)
 ;; add the emacs-eclim source
-(require 'ac-emacs-eclim-source)
-(ac-emacs-eclim-config)
+(require 'company)
+(require 'company-emacs-eclim)
+(company-emacs-eclim-setup)
+
 (defun eclim-run-test ()
   (interactive)
   (if (not (string= major-mode "java-mode"))
       (message "Sorry cannot run current buffer."))
   (compile (concat eclim-executable " -command java_junit -p " eclim--project-name " -t " (eclim-package-and-class))))
+
+(add-hook 'java-mode-hook 'company-mode)
+
+(add-hook 'java-mode-hook
+		  (lambda () (auto-complete-mode -1)
+			(local-set-key (kbd "M-<tab>") 'company-complete)))

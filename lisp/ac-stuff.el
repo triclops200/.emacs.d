@@ -1,8 +1,21 @@
-(ac-config-default)
+(require 'auto-complete-config)
 (require 'auto-complete-clang)
 (require 'auto-complete-config)
+(require 'ac-nrepl)
 (setq clang-completion-suppress-error 't)
+(ac-config-default)
 (add-hook 'after-init-hook 'global-auto-complete-mode)
+
+
+
+(add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
+(add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
+(add-hook 'clojure-nrepl-mode-hook 'ac-nrepl-setup)
+(add-hook 'cider-repl-mode-hook 'ac-nrepl-setup)
+(add-hook 'cider-mode-hook 'ac-nrepl-setup)
+(eval-after-load "auto-complete"
+  '(add-to-list 'ac-modes 'cider-repl-mode))
+
 (defun my-ac-cc-mode-setup ()
   (setq ac-sources (append '(ac-source-clang ac-source-yasnippet) ac-sources)))
 (add-hook 'c-mode-common-hook 'my-ac-cc-mode-setup)

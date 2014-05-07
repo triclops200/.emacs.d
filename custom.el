@@ -8,7 +8,7 @@
  '(background-color nil)
  '(background-mode dark)
  '(browse-url-browser-function (quote browse-url-generic))
- '(browse-url-generic-program "/usr/bin/dwb")
+ '(browse-url-generic-program "/usr/bin/firefox")
  '(cursor-color nil)
  '(custom-safe-themes
    (quote
@@ -31,7 +31,7 @@
 
 ;;My customizations follow
 (add-to-list 'custom-theme-load-path
-	     "~/.emacs.d/emacs-color-theme-solarized")
+			 "~/.emacs.d/emacs-color-theme-solarized")
 (load-theme 'solarized-dark t)
 (quote (set-default-font "-*-Monaco-normal-normal-normal-monospace-13-*-*-*-m-0-iso10646-1"))
 (set-default-font "-bitstream-Bitstream Vera Sans Mono-normal-normal-normal-monospace-13-*-*-*-m-0-iso10646-1")
@@ -40,12 +40,12 @@
 (global-linum-mode t)
 (load "my-packages.el")
 (load "custom-scripts.el")
+(load "asthetics-stuff.el")
+(load "paredit-stuff.el")
 (load "eclim-stuff.el")
 (load "my-functions.el")
 (load "slime-stuff.el")
-(load "asthetics-stuff.el")
-(load "ac-stuff.el")
-(load "paredit-stuff.el")
+(load "ac-stuff.el" )
 (load "python-stuff.el")
 (load "org-stuff.el")
 (load "erc-stuff.el")
@@ -59,3 +59,10 @@
 (load "znc_servers.el")
 (setq initial-scratch-message "")
 (setq inhibit-startup-message t)
+
+(if (daemonp)
+	(add-hook 'after-make-frame-functions
+			  '(lambda (f)
+				 (with-selected-frame f
+				   (when (window-system f) (load-theme 'solarized-dark t)))))
+  (load-theme 'solarized-dark t))

@@ -26,6 +26,7 @@
 			evil
 			evil-paredit
 			markdown-mode
+			ac-nrepl
 			htmlize
 			w3m))
 (defvar refresh t)
