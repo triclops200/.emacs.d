@@ -26,6 +26,7 @@
 			evil
 			evil-paredit
 			markdown-mode
+			company
 			ac-nrepl
 			htmlize
 			w3m))
