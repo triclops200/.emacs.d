@@ -6,11 +6,13 @@
 (ac-config-default)
 (add-hook 'after-init-hook 'global-auto-complete-mode)
 
+(setq ac-delay 0.25)
 
 
-(add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
-(add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
-(add-hook 'clojure-nrepl-mode-hook 'ac-nrepl-setup)
+;;(add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
+;;(add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
+;;(add-hook 'clojure-nrepl-mode-hook 'ac-nrepl-setup)
+
 (add-hook 'cider-repl-mode-hook 'ac-nrepl-setup)
 (add-hook 'cider-mode-hook 'ac-nrepl-setup)
 (eval-after-load "auto-complete"
